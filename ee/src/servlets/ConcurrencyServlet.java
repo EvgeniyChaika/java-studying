@@ -1,7 +1,6 @@
 package servlets;
 
 import javax.servlet.ServletException;
-import javax.servlet.SingleThreadModel;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -17,18 +16,20 @@ import java.net.URLConnection;
         name = "ConcurrencyServlet",
         value = {"/concurrent"}
 )
-public class ConcurrencyServlet extends HttpServlet implements SingleThreadModel {
+public class ConcurrencyServlet extends HttpServlet {
 
-    private int count = 0;
+    private static int count = 0;
 
     /**
-     * @return Output value has to be 1_000_000
+     * @return First output value has to be 1_000_000 for first Thread and 2_000_000 for second Thread
      */
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         System.out.println(Thread.currentThread().getName());
-        for (int i = 0; i < 1_000_000; i++) {
-            count++;
+        synchronized (this) {
+            for (int i = 0; i < 1_000_000; i++) {
+                count++;
+            }
         }
         System.out.println(count);
     }
