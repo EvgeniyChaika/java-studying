@@ -1,6 +1,7 @@
 package servlets;
 
 import javax.servlet.ServletException;
+import javax.servlet.SingleThreadModel;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -16,7 +17,7 @@ import java.net.URLConnection;
         name = "ConcurrencyServlet",
         value = {"/concurrent"}
 )
-public class ConcurrencyServlet extends HttpServlet {
+public class ConcurrencyServlet extends HttpServlet implements SingleThreadModel {
 
     private int count = 0;
 
