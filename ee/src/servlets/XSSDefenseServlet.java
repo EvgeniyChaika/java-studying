@@ -11,7 +11,7 @@ import java.io.IOException;
  * Created by echaika on 18.11.2018
  */
 @WebServlet("/xss")
-public class XSSDefenceServlet extends HttpServlet {
+public class XSSDefenseServlet extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
