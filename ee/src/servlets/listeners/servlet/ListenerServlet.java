@@ -1,7 +1,6 @@
 package servlets.listeners.servlet;
 
 import javax.servlet.ServletException;
-import javax.servlet.annotation.WebInitParam;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -12,7 +11,6 @@ import java.io.IOException;
  * Created by echaika on 29.11.2018
  */
 @WebServlet("/listener")
-@WebInitParam(name = "test", value = "test")
 public class ListenerServlet extends HttpServlet {
 
     @Override
