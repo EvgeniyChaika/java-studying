@@ -24,8 +24,8 @@ public class MainFilter implements Filter {
     @Override
     public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain) throws IOException, ServletException {
         request.setAttribute(HttpHeaders.DATE, new Date());
-        RequestDispatcher requestDispatcher = request.getRequestDispatcher("URL");
-        requestDispatcher.forward(request, response);
+        request.setCharacterEncoding("UTF-8");
+        chain.doFilter(request, response);
         System.out.println("Filter ServletRequest - " + request.toString());
         System.out.println("Filter ServletResponse - " + response.toString());
         System.out.println("Filter FilterChain - " + chain.toString());

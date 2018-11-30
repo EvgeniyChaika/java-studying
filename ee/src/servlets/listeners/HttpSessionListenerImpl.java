@@ -8,7 +8,7 @@ import javax.servlet.http.HttpSessionListener;
  * Created by echaika on 29.11.2018
  */
 @WebListener
-public class TestHttpSessionListener implements HttpSessionListener {
+public class HttpSessionListenerImpl implements HttpSessionListener {
 
     @Override
     public void sessionCreated(HttpSessionEvent se) {

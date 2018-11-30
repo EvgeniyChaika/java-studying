@@ -8,7 +8,7 @@ import javax.servlet.annotation.WebListener;
  * Created by echaika on 29.11.2018
  */
 @WebListener
-public class TestServletRequestListener implements ServletRequestListener {
+public class ServletRequestListenerImpl implements ServletRequestListener {
 
     @Override
     public void requestInitialized(ServletRequestEvent sre) {
