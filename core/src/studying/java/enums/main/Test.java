@@ -1,7 +1,7 @@
-package enums.main;
+package studying.java.enums.main;
 
-import enums.Color;
-import enums.Jacket;
+import studying.java.enums.Color;
+import studying.java.enums.Jacket;
 
 /**
  * Created by echaika on 18.11.2018

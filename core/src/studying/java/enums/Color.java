@@ -1,4 +1,4 @@
-package enums;
+package studying.java.enums;
 
 /**
  * Created by echaika on 18.11.2018
