@@ -1,4 +1,4 @@
-package studying.java.enums;
+package studying.java.enums.main;
 
 /**
  * Created by echaika on 18.11.2018
@@ -7,9 +7,9 @@ public class Jacket {
 
     private String name;
 
-    private Color color;
+    private ColorJacket color;
 
-    public Jacket(String name, Color color) {
+    public Jacket(String name, ColorJacket color) {
         this.name = name;
         this.color = color;
     }
