@@ -5,13 +5,19 @@ package studying.java.constructor.inheritance;
  */
 class Animal {
     // 1.
-    Animal(String name) {
-        System.out.println("String parent constructor - " + name);
+    Animal(String value) {
+        System.out.println("String parent constructor - " + value);
     }
 
     // 3.
     Animal() {
         System.out.println("Empty parent constructor");
+    }
+
+    // 6.
+    static String getName() {
+        int x = (int) (Math.random() * 5);
+        return new String[]{"Fluffy", "Fido", "Rover", "Spike", "Gigi"}[x];
     }
 }
 
@@ -37,11 +43,12 @@ class Horse extends Animal {
         // 5. can pass static variables
 //        this(STATIC);
         // 6. can pass static methods
-        this(print());
+//        this(getName());
+        this(Animal.getName());
     }
 
     // 6. 
-    private static String print() {
+    static String getName() {
         return "Static method";
     }
 }
