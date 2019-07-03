@@ -51,6 +51,14 @@ class Horse extends Animal {
     static String getName() {
         return "Static method";
     }
+//    can't create methods 'this' and 'super'
+//    static String this(String val) {
+//        return val;
+//    }
+//
+//    static String super(String value) {
+//        return value;
+//    }
 }
 
 class Test {
